@@ -1,0 +1,97 @@
+@import '../fonts';
+@import '../colors';
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 2rem;
+
+    h1 {
+        font-weight: $bold-font-weight;
+        font-size: 3rem;
+    }
+
+    .big-project-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+
+        margin-top: 4rem;
+        padding: 0 10rem;
+
+        .big-project-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            margin-top: 4rem;
+
+            h3 {
+                color: $tertiary-color;
+                font-size: 1rem;
+                font-weight: $light-font-weight;
+                line-height: 1;
+            }
+
+            h2 {
+                color: $white-color;
+                font-size: 3rem;
+                font-weight: $bold-font-weight;
+                line-height: 1.4;
+            }
+
+            p {
+                color: $gray-color;
+                font-size: 1rem;
+                font-weight: $regular-font-weight;
+                line-height: 1.7;
+                letter-spacing: 1px;
+                padding: 1rem;
+                margin-top: 1.5rem;
+                margin-right: -3rem;
+                z-index: 2;
+
+
+                border: 1px solid $tertiary-color;
+                background: linear-gradient(
+                    to right,
+                    rgba($tertiary-color, 0.1),
+                    rgba($white-color, 0.1)
+                );
+                backdrop-filter: blur(20px); 
+                -webkit-backdrop-filter: blur(20px); 
+                border-radius: 12px;   
+            }
+        }
+
+        .big-project-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+    }
+
+    .link-logos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 1rem;
+
+        a {
+            transition: all 0.3s ease;
+            &:hover {
+                transform: translateY(-3px) scale(1.05);
+            }
+        }
+    }
+}
+
+@import "../components/imageFrame";

@@ -1,0 +1,47 @@
+@import "../colors";
+
+.image-frame-container {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: linear-gradient(to bottom, $primary-color, $tertiary-color);
+        border: 1px solid $tertiary-color;
+        border-radius: 0 30px 0 0;
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        background: rgba($tertiary-color, 1);
+        filter: blur(200px);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    img {
+        border: 1px solid $tertiary-color;
+        border-radius: 0 30px 0 0;
+        position: relative;
+        z-index: 1;
+        aspect-ratio: 16 / 9;
+        transition: all 0.3s ease;
+
+        &:hover {
+            filter: brightness(80%);
+            transform: translate(5px, -5px);
+        }
+    }
+
+}
