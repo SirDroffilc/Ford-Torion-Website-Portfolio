@@ -19,7 +19,7 @@ import typescriptLogo from "../assets/About/skills-icons/typescript-logo.svg";
 function About() {
 	return (
 		<>
-			<div className="about-container">
+			<div className="about-container" id="about">
 				<div className="about-info">
 					<div className="about-info-details">
 						<h1>Ford Torion</h1>

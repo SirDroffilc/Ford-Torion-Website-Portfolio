@@ -49,6 +49,10 @@ a {
   text-decoration: none;
 }
 
+#about, #projects, #experience, #certifications, #education {
+  scroll-margin-top: 100px;
+}
+
 .header-container {
   background-color: #1a0b2e;
   height: 70px;
@@ -530,83 +534,12 @@ a {
 .projects-container h1 {
   font-weight: 600;
   font-size: 3rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.projects-container .big-project-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-top: 4rem;
-  padding: 0 10rem;
-}
-.projects-container .big-project-container .big-project-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-top: 4rem;
-}
-.projects-container .big-project-container .big-project-info h3 {
-  color: #7127BA;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1;
-}
-.projects-container .big-project-container .big-project-info h2 {
-  color: rgb(255, 255, 255);
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
-.projects-container .big-project-container .big-project-info p {
-  color: #E6E6E6;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: 1px;
-  padding: 1rem;
-  margin-top: 1.5rem;
-  margin-right: -3rem;
-  z-index: 2;
-  border: 1px solid #7127BA;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(113, 39, 186, 0.1)), to(rgba(255, 255, 255, 0.1)));
-  background: linear-gradient(to right, rgba(113, 39, 186, 0.1), rgba(255, 255, 255, 0.1));
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 12px;
-}
-.projects-container .big-project-container .big-project-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.projects-container h1:hover {
+  -webkit-transform: translateY(-2px) scale(1.05);
+          transform: translateY(-2px) scale(1.05);
 }
 .projects-container .link-logos {
   display: -webkit-box;
@@ -633,9 +566,179 @@ a {
   -webkit-transform: translateY(-3px) scale(1.05);
           transform: translateY(-3px) scale(1.05);
 }
+.projects-container .big-project-info, .projects-container .small-project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 4rem;
+}
+.projects-container .big-project-info h3, .projects-container .small-project-info h3 {
+  color: #7127BA;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1;
+}
+.projects-container .big-project-info h2, .projects-container .small-project-info h2 {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.projects-container .big-project-info p, .projects-container .small-project-info p {
+  color: #E6E6E6;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  margin-right: -3rem;
+  z-index: 2;
+  border: 1px solid #7127BA;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(113, 39, 186, 0.1)), to(rgba(255, 255, 255, 0.1)));
+  background: linear-gradient(to right, rgba(113, 39, 186, 0.1), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+}
+.projects-container .big-project-info p span, .projects-container .small-project-info p span {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+.projects-container .big-project-info h3, .projects-container .big-project-info h2, .projects-container .big-project-info p, .projects-container .small-project-info h3, .projects-container .small-project-info h2, .projects-container .small-project-info p {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.projects-container .big-project-info h3:hover, .projects-container .big-project-info h2:hover, .projects-container .big-project-info p:hover, .projects-container .small-project-info h3:hover, .projects-container .small-project-info h2:hover, .projects-container .small-project-info p:hover {
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+}
+.projects-container .big-project-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 4rem;
+  padding: 0 10rem;
+}
+.projects-container .big-project-container .big-project-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.projects-container .big-project-container.reversed .big-project-info {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.projects-container .big-project-container.reversed .big-project-info p {
+  margin-right: 0;
+  margin-left: -3rem;
+}
+.projects-container .big-project-container.reversed .big-project-info h3:hover, .projects-container .big-project-container.reversed .big-project-info h2:hover, .projects-container .big-project-container.reversed .big-project-info p:hover {
+  -webkit-transform: translateX(-3px);
+          transform: translateX(-3px);
+}
+.projects-container .big-project-container.reversed .image-frame-container::before {
+  bottom: 2rem;
+  right: 2rem;
+  left: auto;
+  border-radius: 30px 0 0 0;
+}
+.projects-container .big-project-container.reversed .image-frame-container img {
+  border-radius: 30px 0 0 0;
+}
+.projects-container .big-project-container.reversed .image-frame-container img:hover {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+  -webkit-transform: translate(-5px, -5px);
+          transform: translate(-5px, -5px);
+}
+.projects-container .small-projects-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10rem;
+  margin-top: 4rem;
+  gap: 8rem;
+}
+.projects-container .small-projects-section .small-project-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.projects-container .small-projects-section .small-project-container .small-project-info {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0;
+}
+.projects-container .small-projects-section .small-project-container .small-project-info h3:hover, .projects-container .small-projects-section .small-project-container .small-project-info h2:hover, .projects-container .small-projects-section .small-project-container .small-project-info p:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+.projects-container .small-projects-section .small-project-container .small-project-info p {
+  margin: 1rem 0 0 0;
+}
+.projects-container .small-projects-section .small-project-container .small-project-image {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .image-frame-container {
   position: relative;
+  width: 620px;
+  max-width: 100%;
 }
 .image-frame-container::before {
   content: "";
@@ -649,6 +752,12 @@ a {
   border: 1px solid #7127BA;
   border-radius: 0 30px 0 0;
   z-index: -1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.image-frame-container:hover::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 7, 31, 0.5)), to(rgba(113, 39, 186, 0.5)));
+  background: linear-gradient(to bottom, rgba(17, 7, 31, 0.5), rgba(113, 39, 186, 0.5));
 }
 .image-frame-container::after {
   content: "";
@@ -675,8 +784,8 @@ a {
   transition: all 0.3s ease;
 }
 .image-frame-container img:hover {
-  -webkit-filter: brightness(80%);
-          filter: brightness(80%);
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
   -webkit-transform: translate(5px, -5px);
           transform: translate(5px, -5px);
 }/*# sourceMappingURL=main.css.map */

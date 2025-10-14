@@ -22,7 +22,7 @@ function Projects() {
 
     return (
         <div className="projects-container">
-            <h1>Projects</h1>
+            <h1 id="projects">Projects</h1>
 
             <div className="big-project-container">
                 <div className="big-project-info">
@@ -35,7 +35,6 @@ function Projects() {
                     <ImageFrame imgSrc={closedOpen} alt="Closed;Open" width={620} link={closedOpenItchIo}/>
 
                     <div className="link-logos">
-                        <img src={linkIcon} alt="linkIcon" />
                         <a href={closedOpenItchIo} target="_blank">
                             <img src={itchIoLogo} alt="closedOpenItchIo" />
                         </a>
@@ -47,6 +46,63 @@ function Projects() {
                 </div>
                 
             </div>
+
+            <div className="big-project-container reversed">
+                <div className="big-project-image">
+                    
+                    <ImageFrame imgSrc={_4rdAnime} alt="4rdAnime" width={620} link={_4rdAnimeWebsite}/>
+
+                    <div className="link-logos">
+                        <a href={_4rdAnimeWebsite} target="_blank">
+                            <img src={webIcon} alt="4rdAnime Website" />
+                        </a>
+
+                        <a href={_4rdAnimeGitHub} target="_blank">
+                            <img src={githubLogo} alt="4rdAnime GitHub" />
+                        </a>
+                    </div>
+                </div>
+                <div className="big-project-info">
+                    <h3>React Web App</h3>
+                    <h2>4rdAnime</h2>
+                    <p>
+                        An anime information website deployed on <span>Vercel</span> and developed using <span>React</span>, <span>Typescript</span>, and the <span>Jikan API</span>, the unofficial open-source API for the most active anime and manga community - <span>MyAnimeList</span>. <span>4rdAnime</span> features recently updated, most popular, and top-rated anime, along with a search function for specific shows and characters.
+                    </p>
+                </div>
+            </div>
+
+            <div className="small-projects-section">
+                <div className="small-project-container">
+                    <div className="small-project-info">
+                        <h3>Flask Web App</h3>
+                        <h2>QuizMe</h2>
+                    </div>
+
+                    <div className="small-project-image">
+                        <ImageFrame imgSrc={quizMe} alt="QuizMe" width={620} link={quizMeGitHub} />
+                    </div>
+
+                    <div className="small-project-info">
+                        <p>A full-stack web application that allows users to create and share custom quizzes. Developed using Python with Flask, HTML, CSS, and Javascript.</p>
+                    </div>                
+                </div>
+
+                <div className="small-project-container">
+                    <div className="small-project-info">
+                        <h3>CLI-based RPG</h3>
+                        <h2>PokéRPG (CLI)</h2>
+                    </div>
+
+                    <div className="small-project-image">
+                        <ImageFrame imgSrc={pokeRPG} alt="QuizMe" width={620} link={pokerpgGithub} />
+                    </div>
+
+                    <div className="small-project-info">
+                        <p>PokéRPG is a command-line based Pokémon RPG that allows users to take on the role of a Pokémon Trainer. Developed using Python and the PokéAPI.</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     )
 }

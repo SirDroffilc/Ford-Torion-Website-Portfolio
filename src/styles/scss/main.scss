@@ -22,6 +22,9 @@ a {
     text-decoration: none;
 }
 
+#about, #projects, #experience, #certifications, #education {
+    scroll-margin-top: 100px;
+}
 @import 'components/header';
 
 @import 'sections/about';

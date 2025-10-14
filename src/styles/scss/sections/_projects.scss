@@ -12,70 +12,13 @@
     h1 {
         font-weight: $bold-font-weight;
         font-size: 3rem;
-    }
+        transition: all 0.3s ease;
 
-    .big-project-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-
-        margin-top: 4rem;
-        padding: 0 10rem;
-
-        .big-project-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-
-            margin-top: 4rem;
-
-            h3 {
-                color: $tertiary-color;
-                font-size: 1rem;
-                font-weight: $light-font-weight;
-                line-height: 1;
-            }
-
-            h2 {
-                color: $white-color;
-                font-size: 3rem;
-                font-weight: $bold-font-weight;
-                line-height: 1.4;
-            }
-
-            p {
-                color: $gray-color;
-                font-size: 1rem;
-                font-weight: $regular-font-weight;
-                line-height: 1.7;
-                letter-spacing: 1px;
-                padding: 1rem;
-                margin-top: 1.5rem;
-                margin-right: -3rem;
-                z-index: 2;
-
-
-                border: 1px solid $tertiary-color;
-                background: linear-gradient(
-                    to right,
-                    rgba($tertiary-color, 0.1),
-                    rgba($white-color, 0.1)
-                );
-                backdrop-filter: blur(20px); 
-                -webkit-backdrop-filter: blur(20px); 
-                border-radius: 12px;   
-            }
-        }
-
-        .big-project-image {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center
+        &:hover {
+            transform: translateY(-2px) scale(1.05);
         }
     }
+    
 
     .link-logos {
         display: flex;
@@ -90,6 +33,151 @@
             &:hover {
                 transform: translateY(-3px) scale(1.05);
             }
+        }
+    }
+
+    .big-project-info, .small-project-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 4rem;
+
+        h3 {
+            color: $tertiary-color;
+            font-size: 1rem;
+            font-weight: $light-font-weight;
+            line-height: 1;
+        }
+
+        h2 {
+            color: $white-color;
+            font-size: 3rem;
+            font-weight: $bold-font-weight;
+            line-height: 1.4;
+        }
+
+        p {
+            color: $gray-color;
+            font-size: 1rem;
+            font-weight: $regular-font-weight;
+            line-height: 1.7;
+            letter-spacing: 1px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            margin-right: -3rem;
+            z-index: 2;
+            border: 1px solid $tertiary-color;
+            background: linear-gradient(
+                to right,
+                rgba($tertiary-color, 0.1),
+                rgba($white-color, 0.1)
+            );
+            backdrop-filter: blur(20px); 
+            -webkit-backdrop-filter: blur(20px); 
+            border-radius: 12px;   
+
+            span {
+                color: $white-color;
+                font-weight: 600;
+            }
+        }
+
+        h3, h2, p {
+            transition: all 0.2s ease;
+        }
+
+        h3:hover, h2:hover, p:hover {
+            transform: translateX(3px);
+        }
+    }
+
+    .big-project-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 4rem;
+        padding: 0 10rem;
+
+        .big-project-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        // Modifier class for reversed layout
+        &.reversed {
+            .big-project-info {
+                align-items: flex-end;
+                
+                p {
+                    margin-right: 0;
+                    margin-left: -3rem;
+                }
+
+                h3:hover, h2:hover, p:hover {
+                    transform: translateX(-3px);
+                }
+            }
+
+            .image-frame-container {
+                &::before {
+                    bottom: 2rem;
+                    right: 2rem;
+                    left: auto;
+                    border-radius: 30px 0 0 0;
+                }
+
+                img {
+                    border-radius: 30px 0 0 0;
+                    &:hover {
+                        filter: brightness(70%);
+                        transform: translate(-5px, -5px);
+                    }
+                }
+            }
+        }
+    }
+
+    .small-projects-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0 10rem;
+        margin-top: 4rem;
+
+        gap: 8rem;
+
+        .small-project-container {
+            flex: 1;
+
+            .small-project-info {
+                justify-content: center;
+                align-items: center;
+                margin-top: 0;
+
+                h3, h2, p {
+                    &:hover {
+                        transform: translateY(-3px);
+                    }
+                }
+
+                p {
+                    margin: 1rem 0 0 0;
+                }
+            }
+
+            .small-project-image {
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
         }
     }
 }
