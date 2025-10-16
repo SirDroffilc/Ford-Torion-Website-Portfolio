@@ -1,0 +1,117 @@
+@use "../fonts" as *;
+@use "../colors" as *;
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .education-secondary-container {
+        background-color: $secondary-color;
+        width: 100%;
+        margin-top: 4rem;
+        padding: 5rem 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 2rem;
+
+        .school-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 5rem;
+
+            .school-logo {
+                flex: 1;
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            .school-info {
+                flex: 2;
+
+                h2 {
+                    font-size: 1.4rem;
+                }
+                
+                .school-details {
+                    font-size: 1rem;
+                    line-height: 1.7;
+                    padding: 1rem;
+                    margin-top: 1rem;
+                    z-index: 2;
+                    border: 1px solid $tertiary-color;
+                    background: linear-gradient(
+                        to right,
+                        rgba($tertiary-color, 0.1),
+                        rgba($white-color, 0.1)
+                    );
+                    backdrop-filter: blur(20px); 
+                    -webkit-backdrop-filter: blur(20px); 
+                    border-radius: 12px;   
+
+                    .school-name {
+                        font-weight: $bold-font-weight;
+                        font-size: 1rem;
+                    }
+
+                    .school-date {
+                        font-weight: $regular-font-weight;
+                        font-size: 1rem;
+                    }
+
+                    .school-achievement {
+                        font-weight: $light-font-weight;
+                        font-size: 1rem;
+                        margin-top: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .education-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 6rem;
+
+        h1 {
+            font-weight: $bold-font-weight;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        .education-contact-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+
+            img {
+                width: 100px;
+                height: auto;
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: translateY(-5px) scale(1.05);
+                }
+            }
+        }
+    }
+}
+
