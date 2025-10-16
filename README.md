@@ -1,5 +1,5 @@
-# Ford Torion Porfolio Website
+# Ford Torion Portfolio Website
 
 This is my website portfolio developed using React with TypeScript, HTML, and CSS with SASS.
 
-[Portfolio Website Link](https://fordtorion.vercel.app)
+## [Portfolio Website Link](https://fordtorion.vercel.app)
