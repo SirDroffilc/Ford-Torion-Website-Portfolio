@@ -1,0 +1,83 @@
+@use '../fonts' as *;
+@use '../colors' as *;
+
+.experience-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 3rem; // space for the timeline
+    
+    // Vertical timeline line
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.6rem; // align with date
+        bottom: -2rem; // extend to next item
+        width: 2px;
+        background: linear-gradient(
+            to bottom,
+            $tertiary-color,
+            transparent
+        );
+    }
+
+    &:last-child::before {
+        background: linear-gradient(
+            to bottom,
+            $tertiary-color 50%,
+            transparent
+        );
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -6px;
+        top: 0.5rem;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: $tertiary-color;
+        box-shadow: 
+            0 0 10px rgba($tertiary-color, 0.8),
+            0 0 20px rgba($tertiary-color, 0.4);
+        z-index: 1;
+    }
+    
+    .experience-date {
+        position: absolute;
+        left: -5rem;
+        top: 0.3rem;
+        color: $white-color;
+        font-size: 1.1rem;
+        font-weight: $bold-font-weight;
+    }
+
+    h1 {
+        font-weight: $bold-font-weight;
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-weight: $light-font-weight;
+        font-size: 1rem;
+        color: $gray-color;
+        margin-top: 0.5rem;
+    }
+
+    .experience-date, h1, p {
+        transition: all 0.3s ease;
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    .image-frame-container {
+        align-self: center;
+        margin-top: 3rem;
+    }
+}

@@ -1,0 +1,35 @@
+@use "../fonts" as *;
+
+.certifications-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+
+    .certificates-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 7rem;
+        column-gap: 15rem;
+        margin-top: 4rem;
+        .certificate-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 1.5rem;
+                font-weight: $bold-font-weight;
+                margin-bottom: 3rem;
+                text-align: center;
+
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}

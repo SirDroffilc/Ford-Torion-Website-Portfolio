@@ -1,5 +1,12 @@
-@import 'fonts';
-@import 'colors';
+@use 'fonts' as *;
+@use 'colors' as *;
+
+@use 'components/header' as *;
+
+@use 'sections/about' as *;
+@use 'sections/projects' as *;
+@use 'sections/experience' as *;
+@use 'sections/certifications' as *;
 
 html {
     scroll-behavior: smooth;
@@ -15,18 +22,44 @@ html {
 body {
     background-color: $primary-color;
     line-height: 1.5;
-    padding-top: 70px;
+    padding: 70px 0;
+}
+
+body, #root {
+	min-width: 1900px;
+	max-width: 1900px;
 }
 
 a {
     text-decoration: none;
 }
 
+hr {
+    width: 90%;
+    height: 2px;
+    margin: 4rem 0;
+    border: none;
+    background: linear-gradient(
+        to right,
+        transparent,
+        $tertiary-color,
+        transparent
+    );
+    box-shadow: 0 0 10px rgba($tertiary-color, 1);
+}
+
 #about, #projects, #experience, #certifications, #education {
     scroll-margin-top: 100px;
 }
-@import 'components/header';
 
-@import 'sections/about';
-@import 'sections/projects';
+#projects, #experience, #certifications, #education {
+    font-weight: $bold-font-weight;
+    font-size: 3rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px) scale(1.05);
+    }
+}
+
 

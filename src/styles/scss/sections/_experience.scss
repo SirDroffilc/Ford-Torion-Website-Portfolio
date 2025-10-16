@@ -1,0 +1,49 @@
+@use 'sass:color';
+
+@use '../fonts' as *;
+@use '../colors' as *;
+
+@use "../components/imageFrame" as *;
+@use "../components/experienceItem" as *;
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 2rem;
+
+    .experience-second-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+
+        width: 100%;
+        margin-top: 2rem;
+        padding: 2rem 0 5rem 0;
+        background-color: $secondary-color;
+        gap: 2rem;
+        z-index: 0;
+        
+        .hackathons-column, .leadership-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10rem 0 15rem;
+            
+            .column-label {
+                font-weight: $bold-font-weight;
+                color: $tertiary-color;
+                font-size: 2rem;
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}

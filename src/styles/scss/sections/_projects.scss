@@ -1,5 +1,9 @@
-@import '../fonts';
-@import '../colors';
+@use 'sass:color';
+
+@use '../fonts' as *;
+@use '../colors' as *;
+
+@use "../components/imageFrame" as *;
 
 .projects-container {
     display: flex;
@@ -8,17 +12,6 @@
     align-items: center;
 
     margin-top: 2rem;
-
-    h1 {
-        font-weight: $bold-font-weight;
-        font-size: 3rem;
-        transition: all 0.3s ease;
-
-        &:hover {
-            transform: translateY(-2px) scale(1.05);
-        }
-    }
-    
 
     .link-logos {
         display: flex;
@@ -88,7 +81,7 @@
         }
 
         h3:hover, h2:hover, p:hover {
-            transform: translateX(3px);
+            transform: translateX(5px);
         }
     }
 
@@ -118,7 +111,7 @@
                 }
 
                 h3:hover, h2:hover, p:hover {
-                    transform: translateX(-3px);
+                    transform: translateX(-5px);
                 }
             }
 
@@ -162,12 +155,12 @@
 
                 h3, h2, p {
                     &:hover {
-                        transform: translateY(-3px);
+                        transform: translateY(-5px);
                     }
                 }
 
                 p {
-                    margin: 1rem 0 0 0;
+                    margin: -1.2rem 0 0 0;
                 }
             }
 
@@ -180,6 +173,24 @@
 
         }
     }
+
+    #more-projects {
+        margin-top: 4rem;
+
+        &:hover {
+            transform: none;
+        }
+
+        a {
+            color: $tertiary-color;
+            transition: all 0.3s ease;
+            display: inline-block; 
+
+            &:hover {
+                transform: translateY(-2px);
+                color: color.scale($tertiary-color, $lightness: 20%);
+            }
+        }
+    }
 }
 
-@import "../components/imageFrame";
