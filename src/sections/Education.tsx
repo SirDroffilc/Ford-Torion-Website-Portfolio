@@ -22,7 +22,7 @@ function Education() {
 						<div className="school-details">
 							<p className="school-name">Technological University of the Philippines - Manila</p>
                             <p className="school-date">2023 - Present</p>
-							<p className="school-achievement">&bull; Consistent Academic Achiever with a Current General Weighted Average of 1.32</p>
+							<p className="school-achievement">&bull; <span>Consistent Academic Achiever</span> with a Current General Weighted Average of <span>1.32</span></p>
 						</div>
 					</div>
 				</div>
@@ -37,7 +37,7 @@ function Education() {
 						<div className="school-details">
 							<p className="school-name">Mystical Rose School of Caloocan, Inc.</p>
                             <p className="school-date">2021 - 2023</p>
-							<p className="school-achievement">&bull; Graduated as With High Honors and the S.T.E.M. Valedictorian of Batch 2022-2023.</p>
+							<p className="school-achievement">&bull; Graduated as <span>With High Honors</span> and the <span>S.T.E.M. Valedictorian</span> of Batch 2022-2023.</p>
 						</div>
 					</div>
 				</div>

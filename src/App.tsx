@@ -4,6 +4,7 @@ import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Certifications from "./sections/Certifications";
 import Education from "./sections/Education";
+
 function App() {
 
   return (
