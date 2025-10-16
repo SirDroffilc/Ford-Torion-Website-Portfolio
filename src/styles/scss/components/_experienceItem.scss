@@ -1,6 +1,6 @@
 @use '../fonts' as *;
 @use '../colors' as *;
-
+@use '../animations' as *;
 .experience-item-container {
     display: flex;
     flex-direction: column;
@@ -8,15 +8,15 @@
     align-items: flex-start;
     position: relative;
     margin-top: 2rem;
-    padding-left: 3rem; // space for the timeline
+    padding-left: 3rem;
     
-    // Vertical timeline line
     &::before {
+        @include slideUpMixin;
         content: '';
         position: absolute;
         left: 0;
-        top: 0.6rem; // align with date
-        bottom: -2rem; // extend to next item
+        top: 0.6rem; 
+        bottom: -2rem; 
         width: 2px;
         background: linear-gradient(
             to bottom,
@@ -25,15 +25,8 @@
         );
     }
 
-    &:last-child::before {
-        background: linear-gradient(
-            to bottom,
-            $tertiary-color 50%,
-            transparent
-        );
-    }
-
     &::after {
+        @include slideUpMixin;
         content: '';
         position: absolute;
         left: -6px;
@@ -70,6 +63,7 @@
     }
 
     .experience-date, h1, p {
+        @include slideUpMixin;
         transition: all 0.3s ease;
         &:hover {
             transform: translateY(-5px);

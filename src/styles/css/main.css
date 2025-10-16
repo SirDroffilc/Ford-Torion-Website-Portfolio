@@ -28,6 +28,54 @@
   font-weight: 800;
   font-style: normal;
 }
+@-webkit-keyframes horizontalSlide {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes horizontalSlide {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    opacity: 0.2;
+    scale: 0.7;
+    -webkit-transform: translateY(6rem);
+            transform: translateY(6rem);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0.2;
+    scale: 0.7;
+    -webkit-transform: translateY(6rem);
+            transform: translateY(6rem);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 .header-container {
   background-color: #1a0b2e;
   height: 70px;
@@ -99,27 +147,6 @@
   width: 100%;
 }
 
-@-webkit-keyframes horizontalSlide {
-  from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-@keyframes horizontalSlide {
-  from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
 .about-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,6 +223,10 @@
   line-height: 1.6;
 }
 .about-container .about-info .about-info-details h1, .about-container .about-info .about-info-details h2, .about-container .about-info .about-info-details h3, .about-container .about-info .about-info-details p {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -218,6 +249,10 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 5rem;
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 .about-container .about-info .about-contact h1 {
   font-weight: 600;
@@ -271,6 +306,10 @@
           align-items: center;
   position: relative;
   z-index: 0;
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 .about-container .about-picture::before {
   content: "";
@@ -434,6 +473,10 @@
 .image-frame-container {
   position: relative;
   max-width: 100%;
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 .image-frame-container::before {
   content: "";
@@ -543,20 +586,33 @@
       -ms-flex-align: start;
           align-items: flex-start;
   margin-top: 4rem;
+  z-index: 2;
 }
 .projects-container .big-project-info h3, .projects-container .small-project-info h3 {
   color: #7127BA;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1;
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 .projects-container .big-project-info h2, .projects-container .small-project-info h2 {
   color: rgb(255, 255, 255);
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.4;
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 .projects-container .big-project-info p, .projects-container .small-project-info p {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   color: #E6E6E6;
   font-size: 1rem;
   font-weight: 400;
@@ -698,6 +754,10 @@
 }
 .projects-container #more-projects {
   margin-top: 4rem;
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 .projects-container #more-projects:hover {
   -webkit-transform: none;
@@ -734,6 +794,10 @@
   padding-left: 3rem;
 }
 .experience-item-container::before {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   content: "";
   position: absolute;
   left: 0;
@@ -743,11 +807,11 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#7127BA), to(transparent));
   background: linear-gradient(to bottom, #7127BA, transparent);
 }
-.experience-item-container:last-child::before {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #7127BA), to(transparent));
-  background: linear-gradient(to bottom, #7127BA 50%, transparent);
-}
 .experience-item-container::after {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   content: "";
   position: absolute;
   left: -6px;
@@ -779,6 +843,10 @@
   margin-top: 0.5rem;
 }
 .experience-item-container .experience-date, .experience-item-container h1, .experience-item-container p {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -849,6 +917,10 @@
   padding: 0 10rem 0 15rem;
 }
 .experience-container .experience-second-container .hackathons-column .column-label, .experience-container .experience-second-container .leadership-column .column-label {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   font-weight: 600;
   color: #7127BA;
   font-size: 2rem;
@@ -898,6 +970,10 @@
           align-items: center;
 }
 .certifications-container .certificates-grid .certificate-item h1 {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 3rem;
@@ -962,6 +1038,10 @@
   padding: 1rem 5rem;
 }
 .education-container .education-secondary-container .school-container .school-logo {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -983,6 +1063,10 @@
           flex: 2;
 }
 .education-container .education-secondary-container .school-container .school-info h2, .education-container .education-secondary-container .school-container .school-info .school-details {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -1023,6 +1107,10 @@
   font-weight: 600;
 }
 .education-container .education-contact {
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,6 +1198,10 @@ hr {
   background: linear-gradient(to right, transparent, #7127BA, transparent);
   -webkit-box-shadow: 0 0 10px #7127ba;
           box-shadow: 0 0 10px #7127ba;
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 
 #about, #projects, #experience, #certifications, #education {
@@ -1121,6 +1213,10 @@ hr {
   font-size: 3rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-animation: slideUp linear;
+          animation: slideUp linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 #projects:hover, #experience:hover, #certifications:hover, #education:hover {
   -webkit-transform: translateY(-3px) scale(1.05);

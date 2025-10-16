@@ -1,10 +1,11 @@
 @use "../colors" as *;
-
+@use "../animations" as *;
 
 .image-frame-container {
     position: relative;
     max-width: 100%;
     // flex-shrink: 0;
+    @include slideUpMixin;
 
     &::before {
         content: '';

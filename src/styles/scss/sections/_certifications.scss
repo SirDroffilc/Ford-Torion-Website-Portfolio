@@ -1,5 +1,5 @@
 @use "../fonts" as *;
-
+@use '../animations' as *;
 .certifications-container {
     display: flex;
     flex-direction: column;
@@ -19,6 +19,7 @@
             align-items: center;
 
             h1 {
+                @include slideUpMixin;
                 font-size: 1.5rem;
                 font-weight: $bold-font-weight;
                 margin-bottom: 3rem;

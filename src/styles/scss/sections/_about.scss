@@ -55,6 +55,7 @@
             }
 
             h1, h2, h3, p {
+                @include slideUpMixin;
                 transition: all 0.3s ease;
             }
 
@@ -70,6 +71,7 @@
             align-items: center;
 
             margin-top: 5rem;
+            @include slideUpMixin;
 
             h1 {
                 font-weight: $bold-font-weight;
@@ -107,6 +109,7 @@
         align-items: center;
         position: relative; // allow pseudo-element positioning
         z-index: 0; // establish stacking context
+        @include slideUpMixin;
 
         // Auto-centered glow behind the image
         &::before {

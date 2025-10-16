@@ -2,6 +2,7 @@
 
 @use '../fonts' as *;
 @use '../colors' as *;
+@use '../animations' as *;
 
 @use "../components/imageFrame" as *;
 
@@ -35,12 +36,14 @@
         justify-content: center;
         align-items: flex-start;
         margin-top: 4rem;
+        z-index: 2;
 
         h3 {
             color: $tertiary-color;
             font-size: 1rem;
             font-weight: $light-font-weight;
             line-height: 1;
+            @include slideUpMixin;
         }
 
         h2 {
@@ -48,9 +51,11 @@
             font-size: 3rem;
             font-weight: $bold-font-weight;
             line-height: 1.4;
+            @include slideUpMixin;
         }
 
         p {
+            @include slideUpMixin;
             color: $gray-color;
             font-size: 1rem;
             font-weight: $regular-font-weight;
@@ -176,6 +181,7 @@
 
     #more-projects {
         margin-top: 4rem;
+        @include slideUpMixin;
 
         &:hover {
             transform: none;

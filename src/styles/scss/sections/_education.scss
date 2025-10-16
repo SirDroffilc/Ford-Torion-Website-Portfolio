@@ -1,5 +1,6 @@
 @use "../fonts" as *;
 @use "../colors" as *;
+@use '../animations' as *;
 
 .education-container {
     display: flex;
@@ -28,6 +29,7 @@
             padding: 1rem 5rem;
 
             .school-logo {
+                @include slideUpMixin;
                 flex: 1;
                 img {
                     width: 300px;
@@ -45,6 +47,7 @@
                 flex: 2;
 
                 h2, .school-details {
+                    @include slideUpMixin;
                     transition: all 0.3s ease;
                     &:hover {
                         transform: translateY(-5px);
@@ -96,6 +99,7 @@
     }
 
     .education-contact {
+        @include slideUpMixin;
         display: flex;
         flex-direction: column;
         justify-content: center;

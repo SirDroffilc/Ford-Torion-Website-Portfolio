@@ -2,7 +2,7 @@
 
 @use '../fonts' as *;
 @use '../colors' as *;
-
+@use '../animations' as *;
 @use "../components/imageFrame" as *;
 @use "../components/experienceItem" as *;
 
@@ -36,6 +36,7 @@
             padding: 0 10rem 0 15rem;
             
             .column-label {
+                @include slideUpMixin;
                 font-weight: $bold-font-weight;
                 color: $tertiary-color;
                 font-size: 2rem;
